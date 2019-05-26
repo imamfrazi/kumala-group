@@ -23,6 +23,11 @@ class TestDriveController extends Controller
         return TD::where('verify', 1)->latest()->paginate(7);
     }
 
+    public function count()
+    {
+        return TD::where('verify', 0)->count();
+    }
+
     /**
      * Show the form for creating a new resource.
      *

@@ -1,9 +1,18 @@
 <?php
 
+Route::get('/', 'KumalaController@index');
+Route::get('/daftarberita', 'KumalaController@berita')->name('berita');
+Route::get('/lowongankarir', 'KumalaController@karir')->name('karir');
+Route::get('/otomotif', 'KumalaController@otomotif')->name('oto');
+Route::get('/otomotif/{oto}', 'KumalaController@oto')->name('motif');
+Route::get('/detail/{id}', 'KumalaController@otom')->name('otom');
+Route::get('/tentang', function(){
+    return view('tentang');
+})->name('about');
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/db', function(){
+    return view('detail_berita');
+})->name('db');
 
 Auth::routes();
 

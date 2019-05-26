@@ -8,15 +8,15 @@
 	<!-- Stylesheets
 	============================================= -->
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Raleway:300,400,500,600,700|Crete+Round:400i" rel="stylesheet" type="text/css" />
-	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
-	<link rel="stylesheet" href="css/style.css" type="text/css" />
-	<link rel="stylesheet" href="css/swiper.css" type="text/css" />
-	<link rel="stylesheet" href="css/dark.css" type="text/css" />
-	<link rel="stylesheet" href="css/font-icons.css" type="text/css" />
-	<link rel="stylesheet" href="css/animate.css" type="text/css" />
-	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+	<link rel="stylesheet" href="{{asset('css/bootstrap.css')}}" type="text/css" />
+	<link rel="stylesheet" href="{{asset('css/style.css')}}" type="text/css" />
+	<link rel="stylesheet" href="{{asset('css/swiper.css')}}" type="text/css" />
+	<link rel="stylesheet" href="{{asset('css/dark.css')}}" type="text/css" />
+	<link rel="stylesheet" href="{{asset('css/font-icons.css')}}" type="text/css" />
+	<link rel="stylesheet" href="{{asset('css/animate.css')}}" type="text/css" />
+	<link rel="stylesheet" href="{{asset('css/magnific-popup.css')}}" type="text/css" />
 
-	<link rel="stylesheet" href="css/responsive.css" type="text/css" />
+	<link rel="stylesheet" href="{{asset('css/responsive.css')}}" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 	<!-- Document Title
@@ -44,9 +44,9 @@
 					<!-- Logo
 					============================================= -->
 					<div id="logo">
-						<a href="index.html" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="images/logo/logo.png" alt="Canvas Logo"></a>
+						<a href="/" class="standard-logo" data-dark-logo="{{asset('images/logo-dark.png')}}"><img src="{{asset('images/logo/logo.png')}}" alt="Canvas Logo"></a>
 						<div class="retina-logo">
-							<a href="index.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="images/logo/logo.png" alt="Canvas Logo"></a>			
+							<a href="/" class="retina-logo" data-dark-logo="{{asset('images/logo-dark@2x.png')}}"><img src="{{asset('images/logo/logo.png')}}" alt="Canvas Logo"></a>			
 						</div>
 					</div><!-- #logo end -->
 
@@ -55,25 +55,25 @@
 					<nav id="primary-menu">
 
 						<ul>
-							<li><a href="index.html"><div>Home</div></a>
+							<li><a href="/"><div>Home</div></a>
 							</li>
-							<li><a href="tentang.html"><div>Tentang Kami</div></a>
+							<li><a href="{{route('about')}}"><div>Tentang Kami</div></a>
 								<ul>
-									<li><a href="#"><div><i class="icon-gift"></i>Sejarah</div></a></li>
-									<li><a href="#"><div><i class="icon-umbrella"></i>Visi & Misi</div></a></li>
-									<li><a href="#"><div><i class="icon-wpforms"></i>BOD</div></a></li>
+									<li><a href="{{route('about')}}"><div><i class="icon-gift"></i>Sejarah</div></a></li>
+									<li><a href="{{route('about')}}"><div><i class="icon-umbrella"></i>Visi & Misi</div></a></li>
+									<li><a href="{{route('about')}}"><div><i class="icon-wpforms"></i>BOD</div></a></li>
 								</ul>
 							</li>
 							<li class="mega-menu current"><a href="#"><div>Unit Bisnis</div></a>
 								<div class="mega-menu-content style-2 clearfix">
 									<ul class="mega-menu-column col-lg-3">
-										<li class="mega-menu-title"><a href="list_otomotif.html"><div>Otomotif</div></a>
+										<li class="mega-menu-title"><a href="{{route('oto')}}"><div>Otomotif</div></a>
 											<ul>
-												<li><a href="#"><div>Wulings</div></a></li>
-												<li><a href=#"><div>Mazda</div></a></li>
-												<li><a href="#"><div>Honda</div></a></li>
-												<li><a href="#"><div>Hino</div></a></li>
-												<li><a href="#"><div>Mercedez Benz</div></a></li>
+													<li><a href="{{route('motif', 'wuling')}}"><div>Wulings</div></a></li>
+													<li><a href="{{route('motif', 'masda')}}"><div>Mazda</div></a></li>
+													<li><a href="{{route('motif', 'honda')}}"><div>Honda</div></a></li>
+													<li><a href="{{route('motif', 'hyno')}}"><div>Hino</div></a></li>
+													<li><a href="{{route('motif', 'mercedes')}}"><div>Mercedez Benz</div></a></li>
 											</ul>
 										</li>
 									</ul>
@@ -99,8 +99,8 @@
 									</ul>
 								</div>
 							</li>
-                            <li class="mega-menu"><a href="listberita.html"><div>Berita</div></a></li>
-							<li class="mega-menu"><a href="karir.html"><div>Karir</div></a></li>
+                            <li class="mega-menu"><a href="{{route('berita')}}"><div>Berita</div></a></li>
+							<li class="mega-menu"><a href="{{route('karir')}}"><div>Karir</div></a></li>
 							<li><a href="kontak.html"><div>Kontak</div></a></li>
 						</ul>
 
@@ -108,7 +108,7 @@
 						<!-- Top Search
 						============================================= -->
 						<div id="top-search">
-								<a href="#"><img style="" src="images/eng.png" width="30" height="30" alt=""></a>
+								<a href="#"><img style="" src="{{asset('images/eng.png')}}" width="30" height="30" alt=""></a>
 						</div><!-- #top-search end -->
 
 					</nav><!-- #primary-menu end -->
@@ -136,7 +136,19 @@
 			<div class="content-wrap">
 				
                     <div class="heading-block notopmargin notopborder center">
-							<h3 data-animate="fadeInDown">Mazda </h3>
+							<h3 data-animate="fadeInDown">
+								@if($nama->merek == "masda")
+								Mazda
+								@elseif($nama->merek == "wuling")
+								Wuling
+								@elseif($nama->merek == "honda")
+								Honda
+								@elseif($nama->merek == "mercedes")
+								Mercedes Benz
+								@elseif($nama->merek == "hyno")
+								Hyno
+								@endif
+							</h3>
 							<!-- <span>We have worked on some Awesome Projects that are worth boasting of.</span> -->
 							<button class="button button-rounded button-reveal button-small button-red tright" data-toggle="modal" data-target=".bs-example-modal-lg">Check Dealer </button>
 
@@ -217,135 +229,23 @@
 
 					<div class="container clearfix">	
                         <div class="row">
+							@foreach ($data as $item)
+								
                             <div class="col-lg-4 topmargin">
-                                <div class="card" style="width: 18rem;">
-                                    <img class="card-img-top" src="images/otomotif/1.png" alt="Card image cap">
-                                    <div class="card-body">
-                                        <h4 style=" color:#C02942" class="card-title">Mazda CX-5</h4>
-                                          <h5 style="float: left;">Starting From* 
-                                            <br> 
-                                            Rp.150.000.000,00
-                                        </h5>
-									<a style="margin-left: 25px;" href="detail_otomotif.html" class="button button-rounded button-reveal button-small button-red tright"><i class="icon-angle-right"></i><span>Check</span></a>
-                                    </div>
-                                </div>
-                            </div>
+								<div class="card" style="width: 18rem;">
+									<img class="card-img-top" style="height: 150px" src="{{asset('img/automotif/'.$item->gambar)}}" alt="Card image cap">
+										<div class="card-body">
+										<h4 style=" color:#C02942" class="card-title">{{$item->nama}}</h4>
+											<h5 style="float: left;">Starting From* 
+													<br> 
+													Rp.{{$item->price}}
+												</h5>
+											<a style="margin-left: 25px;" href="{{route('otom', $item->id)}}" class="button button-rounded button-reveal button-small button-red tright"><i class="icon-angle-right"></i><span>Check</span></a>
+											</div>
+										</div>
+									</div>
+							@endforeach
 
-                            <div class="col-lg-4 topmargin">
-                                <div class="card" style="width: 18rem;">
-                                    <img class="card-img-top" src="images/otomotif/2.png" alt="Card image cap">
-                                    <div class="card-body">
-                                        <h4 style=" color:#C02942" class="card-title">Mazda Biante</h4>
-                                          <h5 style="float: left;">Starting From* 
-                                            <br> 
-                                            Rp.150.000.000,00
-                                        </h5>
-									<a style="margin-left: 25px;" href="#" class="button button-rounded button-reveal button-small button-red tright"><i class="icon-angle-right"></i><span>Check</span></a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 topmargin">
-                                <div class="card" style="width: 18rem;">
-                                    <img class="card-img-top" src="images/otomotif/3.png" alt="Card image cap">
-                                    <div class="card-body">
-                                        <h4 style=" color:#C02942" class="card-title">Mazda 2</h4>
-                                          <h5 style="float: left;">Starting From* 
-                                            <br> 
-                                            Rp.150.000.000,00
-                                        </h5>
-									<a style="margin-left: 25px;" href="#" class="button button-rounded button-reveal button-small button-red tright"><i class="icon-angle-right"></i><span>Check</span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row topmargin">
-                            <div class="col-lg-4">
-                                <div class="card" style="width: 18rem;">
-                                    <img class="card-img-top" src="images/otomotif/1.png" alt="Card image cap">
-                                    <div class="card-body">
-                                        <h4 style=" color:#C02942" class="card-title">Mazda CX-5</h4>
-                                          <h5 style="float: left;">Starting From* 
-                                            <br> 
-                                            Rp.150.000.000,00
-                                        </h5>
-									<a style="margin-left: 25px;" href="#" class="button button-rounded button-reveal button-small button-red tright"><i class="icon-angle-right"></i><span>Check</span></a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 topmargin">
-                                <div class="card" style="width: 18rem;">
-                                    <img class="card-img-top" src="images/otomotif/2.png" alt="Card image cap">
-                                    <div class="card-body">
-                                        <h4 style=" color:#C02942" class="card-title">Mazda Biante</h4>
-                                          <h5 style="float: left;">Starting From* 
-                                            <br> 
-                                            Rp.150.000.000,00
-                                        </h5>
-									<a style="margin-left: 25px;" href="#" class="button button-rounded button-reveal button-small button-red tright"><i class="icon-angle-right"></i><span>Check</span></a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 topmargin">
-                                <div class="card" style="width: 18rem;">
-                                    <img class="card-img-top" src="images/otomotif/3.png" alt="Card image cap">
-                                    <div class="card-body">
-                                        <h4 style=" color:#C02942" class="card-title">Mazda 2</h4>
-                                          <h5 style="float: left;">Starting From* 
-                                            <br> 
-                                            Rp.150.000.000,00
-                                        </h5>
-									<a style="margin-left: 25px;" href="#" class="button button-rounded button-reveal button-small button-red tright"><i class="icon-angle-right"></i><span>Check</span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-lg-4 topmargin">
-                                <div class="card" style="width: 18rem;">
-                                    <img class="card-img-top" src="images/otomotif/1.png" alt="Card image cap">
-                                    <div class="card-body">
-                                        <h4 style=" color:#C02942" class="card-title">Mazda CX-5</h4>
-                                          <h5 style="float: left;">Starting From* 
-                                            <br> 
-                                            Rp.150.000.000,00
-                                        </h5>
-									<a style="margin-left: 25px;" href="#" class="button button-rounded button-reveal button-small button-red tright"><i class="icon-angle-right"></i><span>Check</span></a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 topmargin">
-                                <div class="card" style="width: 18rem;">
-                                    <img class="card-img-top" src="images/otomotif/2.png" alt="Card image cap">
-                                    <div class="card-body">
-                                        <h4 style=" color:#C02942" class="card-title">Mazda Biante</h4>
-                                          <h5 style="float: left;">Starting From* 
-                                            <br> 
-                                            Rp.150.000.000,00
-                                        </h5>
-									<a style="margin-left: 25px;" href="#" class="button button-rounded button-reveal button-small button-red tright"><i class="icon-angle-right"></i><span>Check</span></a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 topmargin">
-                                <div class="card" style="width: 18rem;">
-                                    <img class="card-img-top" src="images/otomotif/3.png" alt="Card image cap">
-                                    <div class="card-body">
-                                        <h4 style=" color:#C02942" class="card-title">Mazda 2</h4>
-                                          <h5 style="float: left;">Starting From* 
-                                            <br> 
-                                            Rp.150.000.000,00
-                                        </h5>
-										<a style="margin-left: 25px;" href="#" class="button button-rounded button-reveal button-small button-red tright"><i class="icon-angle-right"></i><span>Check</span></a>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
 					
@@ -353,15 +253,7 @@
                         <div class="col-12">
                            <nav aria-label="Page navigation example">
                                 <ul class="pagination justify-content-center">
-                                    <li class="page-item disabled">
-                                        <a class="page-link" href="#" tabindex="-1">Previous</a>
-                                    </li>
-                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#">Next</a>
-                                    </li>
+									{{$data->links()}}
                                 </ul>
                             </nav>
                         </div>
@@ -399,12 +291,12 @@
 
 	<!-- External JavaScripts
 	============================================= -->
-	<script src="js/jquery.js"></script>
-	<script src="js/plugins.js"></script>
+	<script src="{{asset('js/jquery.js')}}"></script>
+	<script src="{{asset('js/plugins.js')}}"></script>
 
 	<!-- Footer Scripts
 	============================================= -->
-	<script src="js/functions.js"></script>
+	<script src="{{asset('js/functions.js')}}"></script>
 
 </body>
 </html>

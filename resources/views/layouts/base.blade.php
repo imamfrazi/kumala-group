@@ -55,12 +55,12 @@
 					<nav id="primary-menu">
 
 						<ul>
-							<li><a href="/"><div>Home</div></a>
+							<li class="current"><a href="/"><div>Home</div></a>
 							</li>
-						<li><a href="{{route('about')}}"><div>Tentang Kami</div></a>
+                        <li><a href="{{route('about')}}"><div>Tentang Kami</div></a>
 								<ul>
 									<li><a href="{{route('about')}}"><div><i class="icon-gift"></i>Sejarah</div></a></li>
-									<li><a href="{{route('about')}}"><div><i class="icon-umbrella"></i>Visi & Misi</div></a></li>
+									<li><a href="{{route('about')}}"><div><i class="icon-book2"></i>Visi & Misi</div></a></li>
 									<li><a href="{{route('about')}}"><div><i class="icon-wpforms"></i>BOD</div></a></li>
 								</ul>
 							</li>
@@ -99,7 +99,7 @@
 									</ul>
 								</div>
 							</li>
-                            <li class="mega-menu current"><a href="#"><div>Berita</div></a></li>
+						<li class="mega-menu"><a href="{{route('berita')}}"><div>Berita</div></a></li>
 							<li class="mega-menu"><a href="{{route('karir')}}"><div>Karir</div></a></li>
 							<li><a href="kontak.html"><div>Kontak</div></a></li>
 						</ul>
@@ -107,8 +107,8 @@
 
 						<!-- Top Search
 						============================================= -->
-						<div id="top-search">
-							<a href="#"><img style="" src="{{asset('images/eng.png')}}" width="30" height="30" alt=""></a>
+						<div id="top-search"  style="margin: 0 0 0 15px;">
+								<a href="#"><img style="" src="{{asset('images/eng.png')}}" width="30" height="30" alt=""></a>
 						</div><!-- #top-search end -->
 
 					</nav><!-- #primary-menu end -->
@@ -117,78 +117,8 @@
 
 			</div>
 
-		</header><!-- #header end -->
-
-		<!-- Page Title
-		============================================= -->
-		<section id="page-title">
-
-			<div class="container clearfix">
-				<h1>Berita</h1>
-				<span>Berita Terkini</span>
-				<ol class="breadcrumb">
-					<li class="breadcrumb-item"><a href="/">Home</a></li>
-					<li class="breadcrumb-item active" aria-current="page">Berita</li>
-				</ol>
-			</div>
-
-		</section><!-- #page-title end -->
-
-		<!-- Content
-		============================================= -->
-		<section id="content">
-
-			<div class="content-wrap">
-
-				<div class="container clearfix">
-
-					<!-- Posts
-					============================================= -->
-					<div id="posts" class="post-grid grid-container grid-3 clearfix" data-layout="fitRows">
-						@foreach ($berita as $item)
-						<div class="entry clearfix">
-							<div class="entry-image">
-							<a href="detail_berita.html"><img style="height: 200px" class="image_fade" src="{{asset('img/berita/'.$item['gambar'])}}" alt="Image"></a>
-							</div>
-							<div class="entry-title">
-							<h3>{{$item->judul}}</h3>
-							</div>
-							<ul class="entry-meta clearfix">
-								<li><i class="icon-calendar3"></i>{{date_format($item->updated_at, "d F Y")}}</li>
-								@if($item->type == "berita")
-									<li><span class="badge badge-secondary">Berita</span></li>
-									@else
-									<li><span class="badge badge-info">Promo</span></li>
-									@endif
-							</ul>
-							<div class="entry-content">
-							<p>{{substr($item->deskripsi,0, 60)}}...<a href="{{route('db')}}">Lebih lanjut. </a></p>
-                            </div>
-                        </div>
-						@endforeach
-						
-					</div><!-- #posts end -->
-
-					<div class="row">
-                        <div class="col-12">
-							<nav aria-label="Page navigation example">
-								<ul class="pagination justify-content-center">
-									{{$berita->links()}}
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-
-				</div>
-
-			</div>
-
-		</section><!-- #content end -->
-
-		<!-- Footer
-		============================================= -->
-		<footer id="footer" class="dark">
-
+        </header><!-- #header end -->
+@yield('content')
 			<!-- Copyrights
 			============================================= -->
 			<div id="copyrights">
@@ -198,6 +128,14 @@
 					<div class="col center">
 						Copyrights &copy; 2019 All Rights Reserved by <a href="#">Kumala Group.</a>
 					</div>
+
+					<!-- <div class="col_half col_last tright">
+						<div class="fright clearfix">
+							<div class="copyrights-menu copyright-links nobottommargin">
+								<a href="#">Home</a>/<a href="#">Tentang Kami</a>/<a href="#">Unit Bisnis</a>/<a href="#">Berita</a>/<a href="#">Karir</a>/<a href="#">Kontak</a>
+							</div>
+						</div>
+					</div> -->
 
 				</div>
 

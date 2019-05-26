@@ -8,15 +8,15 @@
 	<!-- Stylesheets
 	============================================= -->
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Raleway:300,400,500,600,700|Crete+Round:400i" rel="stylesheet" type="text/css" />
-	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
-	<link rel="stylesheet" href="css/style.css" type="text/css" />
-	<link rel="stylesheet" href="css/swiper.css" type="text/css" />
-	<link rel="stylesheet" href="css/dark.css" type="text/css" />
-	<link rel="stylesheet" href="css/font-icons.css" type="text/css" />
-	<link rel="stylesheet" href="css/animate.css" type="text/css" />
-	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+	<link rel="stylesheet" href="{{asset('css/bootstrap.css')}}" type="text/css" />
+	<link rel="stylesheet" href="{{asset('css/style.css')}}" type="text/css" />
+	<link rel="stylesheet" href="{{asset('css/swiper.css')}}" type="text/css" />
+	<link rel="stylesheet" href="{{asset('css/dark.css')}}" type="text/css" />
+	<link rel="stylesheet" href="{{asset('css/font-icons.css')}}" type="text/css" />
+	<link rel="stylesheet" href="{{asset('css/animate.css')}}" type="text/css" />
+	<link rel="stylesheet" href="{{asset('css/magnific-popup.css')}}" type="text/css" />
 
-	<link rel="stylesheet" href="css/responsive.css" type="text/css" />
+	<link rel="stylesheet" href="{{asset('css/responsive.css')}}" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 	<!-- Document Title
@@ -44,8 +44,10 @@
 					<!-- Logo
 					============================================= -->
 					<div id="logo">
-						<a href="index.html" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="images/logo/logo.png" alt="Canvas Logo"></a>
-						<a href="index.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="images/logo/logo.png" alt="Canvas Logo"></a>
+							<a href="/" class="standard-logo" data-dark-logo="{{asset('images/logo-dark.png')}}"><img src="{{asset('images/logo/logo.png')}}" alt="Canvas Logo"></a>
+							<div class="retina-logo">
+								<a href="/" class="retina-logo" data-dark-logo="{{asset('images/logo-dark@2x.png')}}"><img src="{{asset('images/logo/logo.png')}}" alt="Canvas Logo"></a>			
+							</div>
 					</div><!-- #logo end -->
 
 					<!-- Primary Navigation
@@ -53,25 +55,25 @@
 					<nav id="primary-menu">
 
 						<ul>
-							<li><a href="index.html"><div>Home</div></a>
+							<li><a href="/"><div>Home</div></a>
 							</li>
-							<li><a href="tentang.html"><div>Tentang Kami</div></a>
+							<li><a href="{{route('about')}}"><div>Tentang Kami</div></a>
 								<ul>
-									<li><a href="#"><div><i class="icon-gift"></i>Sejarah</div></a></li>
-									<li><a href="#"><div><i class="icon-umbrella"></i>Visi & Misi</div></a></li>
-									<li><a href="#"><div><i class="icon-wpforms"></i>BOD</div></a></li>
+									<li><a href="{{route('about')}}"><div><i class="icon-gift"></i>Sejarah</div></a></li>
+									<li><a href="{{route('about')}}"><div><i class="icon-umbrella"></i>Visi & Misi</div></a></li>
+									<li><a href="{{route('about')}}"><div><i class="icon-wpforms"></i>BOD</div></a></li>
 								</ul>
 							</li>
 							<li class="mega-menu"><a href="#"><div>Unit Bisnis</div></a>
 								<div class="mega-menu-content style-2 clearfix">
 									<ul class="mega-menu-column col-lg-3">
-										<li class="mega-menu-title"><a href="#"><div>Otomotif</div></a>
+										<li class="mega-menu-title"><a href="{{route('oto')}}"><div>Otomotif</div></a>
 											<ul>
-												<li><a href="#"><div>Wulings</div></a></li>
-												<li><a href=#"><div>Mazda</div></a></li>
-												<li><a href="list_otomotif.html"><div>Honda</div></a></li>
-												<li><a href="#"><div>Hino</div></a></li>
-												<li><a href="#"><div>Mercedez Benz</div></a></li>
+													<li><a href="{{route('motif', 'wuling')}}"><div>Wulings</div></a></li>
+													<li><a href="{{route('motif', 'masda')}}"><div>Mazda</div></a></li>
+													<li><a href="{{route('motif', 'honda')}}"><div>Honda</div></a></li>
+													<li><a href="{{route('motif', 'hyno')}}"><div>Hino</div></a></li>
+													<li><a href="{{route('motif', 'mercedes')}}"><div>Mercedez Benz</div></a></li>
 											</ul>
 										</li>
 									</ul>
@@ -97,8 +99,8 @@
 									</ul>
 								</div>
 							</li>
-              				<li class="mega-menu"><a href="listberita.html"><div>Berita</div></a></li>
-							<li class="mega-menu current"><a href="karir.html"><div>Karir</div></a></li>
+              				<li class="mega-menu"><a href="{{route('berita')}}"><div>Berita</div></a></li>
+							<li class="mega-menu current"><a href="#"><div>Karir</div></a></li>
 							<li><a href="kontak.html"><div>Kontak</div></a></li>
 						</ul>
 
@@ -106,7 +108,7 @@
 						<!-- Top Search
 						============================================= -->
 						<div id="top-search">
-							<a href="#"><img style="" src="images/eng.png" width="30" height="30" alt=""></a>
+								<a href="#"><img style="" src="{{asset('images/eng.png')}}" width="30" height="30" alt=""></a>
 						</div><!-- #top-search end -->
 
 					</nav><!-- #primary-menu end -->
@@ -167,25 +169,27 @@
 							  </tr>
 							</thead>
 							<tbody>
-							  <tr>
-								<td>1</td>
-								<td>Sales</td>
-								<td>Lorem ipsum dolor sit amet.</td>
-								<td>5</td>
-								<td>
+								@foreach ($karir as $item)
 									
-									<button class="button button-3d button-mini button-rounded button-red" data-toggle="modal" data-target=".bs-example-modal-lg">Daftar</button>
+								<tr>
+								<td>{{$item->id}}</td>
+								<td>{{$item->position}}</td>
+								<td>{{$item->deskripsi}}</td>
+								<td>{{$item->jumlah}}</td>
+									<td>
+										
+										<button class="button button-3d button-mini button-rounded button-red" data-toggle="modal" data-target=".bs-example-modal-lg">Daftar</button>
 
-									<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-										<div class="modal-dialog modal-lg">
-											<div class="modal-body">
-												<div class="modal-content">
-													<div class="modal-header">
-														<h4 class="modal-title" id="myModalLabel">Daftar</h4>
-														<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-													</div>
-													<div class="modal-body">
-														<form>
+										<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+											<div class="modal-dialog modal-lg">
+												<div class="modal-body">
+													<div class="modal-content">
+														<div class="modal-header">
+															<h4 class="modal-title" id="myModalLabel">Daftar</h4>
+															<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+														</div>
+														<div class="modal-body">
+															<form>
 															<div class="form-group">
 																<label for="namalengkap">Nama Lengkap: </label>
 																<input type="text" class="form-control" id="namalengkap" placeholder="Nama Lengkap anda">
@@ -228,131 +232,8 @@
 										</div>
 									</div>																
 								</td>
-							  </tr>
-							  <tr>
-								<td>2</td>
-								<td>Admin</td>
-								<td>Lorem ipsum dolor sit amet.</td>
-								<td>2</td>
-								<td>
-									
-									<button class="button button-3d button-mini button-rounded button-red" data-toggle="modal" data-target=".bs-example-modal-lg">Daftar</button>
-
-									<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-										<div class="modal-dialog modal-lg">
-											<div class="modal-body">
-												<div class="modal-content">
-													<div class="modal-header">
-														<h4 class="modal-title" id="myModalLabel">Daftar</h4>
-														<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-													</div>
-													<div class="modal-body">
-														<form>
-															<div class="form-group">
-																<label for="namalengkap">Nama Lengkap: </label>
-																<input type="text" class="form-control" id="namalengkap" placeholder="Nama Lengkap anda">
-															</div>
-															<div class="form-group">
-																<label for="email">Email :</label>
-																<input type="text" class="form-control" id="email" placeholder="Email anda">
-															</div>
-															<div class="form-group">
-																<label for="nohp">No HP: </label>
-																<input type="text" class="form-control" id="nohp" placeholder="No Hp anda">
-															</div>
-															<div class="form-group">
-																<label for="alamat">Alamat :</label>
-																<input type="text" class="form-control" id="alamat" placeholder="Alamat anda">
-															</div>
-															<div class="form-group">
-																<div class="form-group">
-																	<label for="foto">Masukkan Foto anda</label>
-																	<input type="file" class="form-control-file" id="foto">
-																</div>
-															</div>
-															<div class="form-group">
-																<div class="form-group">
-																	<label for="cv">Masukkan CV anda</label>
-																	<input type="file" class="form-control-file" id="cv">
-																</div>
-															</div>
-															<div class="form-group">
-																<div class="form-group">
-																	<label for="lamarankerja">Masukkan Surat Lamaran Kerja anda</label>
-																	<input type="file" class="form-control-file" id="lamarankerja">
-																</div>
-															</div>
-															<button type="submit" class="btn btn-primary">Kirim</button>
-														</form>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>														
-								</td>
-							  </tr>
-							  <tr>
-								<td>3</td>
-								<td>Front Office</td>
-								<td>Lorem ipsum dolor sit amet.</td>
-								<td>3</td>
-								<td>
-									
-									<button class="button button-3d button-mini button-rounded button-red" data-toggle="modal" data-target=".bs-example-modal-lg">Daftar</button>
-
-									<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-										<div class="modal-dialog modal-lg">
-											<div class="modal-body">
-												<div class="modal-content">
-													<div class="modal-header">
-														<h4 class="modal-title" id="myModalLabel">Daftar</h4>
-														<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-													</div>
-													<div class="modal-body">
-														<form>
-															<div class="form-group">
-																<label for="namalengkap">Nama Lengkap: </label>
-																<input type="text" class="form-control" id="namalengkap" placeholder="Nama Lengkap anda">
-															</div>
-															<div class="form-group">
-																<label for="email">Email :</label>
-																<input type="text" class="form-control" id="email" placeholder="Email anda">
-															</div>
-															<div class="form-group">
-																<label for="nohp">No HP: </label>
-																<input type="text" class="form-control" id="nohp" placeholder="No Hp anda">
-															</div>
-															<div class="form-group">
-																<label for="alamat">Alamat :</label>
-																<input type="text" class="form-control" id="alamat" placeholder="Alamat anda">
-															</div>
-															<div class="form-group">
-																<div class="form-group">
-																	<label for="foto">Masukkan Foto anda</label>
-																	<input type="file" class="form-control-file" id="foto">
-																</div>
-															</div>
-															<div class="form-group">
-																<div class="form-group">
-																	<label for="cv">Masukkan CV anda</label>
-																	<input type="file" class="form-control-file" id="cv">
-																</div>
-															</div>
-															<div class="form-group">
-																<div class="form-group">
-																	<label for="lamarankerja">Masukkan Surat Lamaran Kerja anda</label>
-																	<input type="file" class="form-control-file" id="lamarankerja">
-																</div>
-															</div>
-															<button type="submit" class="btn btn-primary">Kirim</button>
-														</form>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</td>
-							  </tr>
+							</tr>
+							@endforeach
 							</tbody>
 						  </table>
 						</div>
@@ -393,12 +274,12 @@
 
 	<!-- External JavaScripts
 	============================================= -->
-	<script src="js/jquery.js"></script>
-	<script src="js/plugins.js"></script>
+	<script src="{{asset('js/jquery.js')}}"></script>
+	<script src="{{asset('js/plugins.js')}}"></script>
 
 	<!-- Footer Scripts
 	============================================= -->
-	<script src="js/functions.js"></script>
+	<script src="{{asset('js/functions.js')}}"></script>
 
 </body>
 </html>

@@ -8,15 +8,15 @@
 	<!-- Stylesheets
 	============================================= -->
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Raleway:300,400,500,600,700|Crete+Round:400i" rel="stylesheet" type="text/css" />
-	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
-	<link rel="stylesheet" href="css/style.css" type="text/css" />
-	<link rel="stylesheet" href="css/swiper.css" type="text/css" />
-	<link rel="stylesheet" href="css/dark.css" type="text/css" />
-	<link rel="stylesheet" href="css/font-icons.css" type="text/css" />
-	<link rel="stylesheet" href="css/animate.css" type="text/css" />
-	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+	<link rel="stylesheet" href="{{asset('css/bootstrap.css')}}" type="text/css" />
+	<link rel="stylesheet" href="{{asset('css/style.css')}}" type="text/css" />
+	<link rel="stylesheet" href="{{asset('css/swiper.css')}}" type="text/css" />
+	<link rel="stylesheet" href="{{asset('css/dark.css')}}" type="text/css" />
+	<link rel="stylesheet" href="{{asset('css/font-icons.css')}}" type="text/css" />
+	<link rel="stylesheet" href="{{asset('css/animate.css')}}" type="text/css" />
+	<link rel="stylesheet" href="{{asset('css/magnific-popup.css')}}" type="text/css" />
 
-	<link rel="stylesheet" href="css/responsive.css" type="text/css" />
+	<link rel="stylesheet" href="{{asset('css/responsive.css')}}" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 	<!-- Document Title
@@ -51,73 +51,72 @@
 					<!-- Logo
 					============================================= -->
 					<div id="logo">
-						<a href="index.html" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="images/logo/logo.png" alt="Canvas Logo"></a>
-						<div class="retina-logo">
-							<a href="index.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="images/logo/logo.png" alt="Canvas Logo"></a>			
-						</div>
+							<a href="/" class="standard-logo" data-dark-logo="{{asset('images/logo-dark.png')}}"><img src="{{asset('images/logo/logo.png')}}" alt="Canvas Logo"></a>
+							<div class="retina-logo">
+								<a href="/" class="retina-logo" data-dark-logo="{{asset('images/logo-dark@2x.png')}}"><img src="{{asset('images/logo/logo.png')}}" alt="Canvas Logo"></a>			
+							</div>
 					</div><!-- #logo end -->
 
 					<!-- Primary Navigation
 					============================================= -->
 					<nav id="primary-menu">
 
-						<ul>
-							<li><a href="index.html"><div>Home</div></a>
-							</li>
-							<li><a href="tentang.html"><div>Tentang Kami</div></a>
-								<ul>
-									<li><a href="#"><div><i class="icon-gift"></i>Sejarah</div></a></li>
-									<li><a href="#"><div><i class="icon-umbrella"></i>Visi & Misi</div></a></li>
-									<li><a href="#"><div><i class="icon-wpforms"></i>BOD</div></a></li>
+							<ul>
+									<li><a href="/"><div>Home</div></a>
+									</li>
+								<li><a href="{{route('about')}}"><div>Tentang Kami</div></a>
+										<ul>
+											<li><a href="{{route('about')}}"><div><i class="icon-gift"></i>Sejarah</div></a></li>
+											<li><a href="{{route('about')}}"><div><i class="icon-umbrella"></i>Visi & Misi</div></a></li>
+											<li><a href="{{route('about')}}"><div><i class="icon-wpforms"></i>BOD</div></a></li>
+										</ul>
+									</li>
+									<li class="mega-menu current"><a href="#"><div>Unit Bisnis</div></a>
+										<div class="mega-menu-content style-2 clearfix">
+											<ul class="mega-menu-column col-lg-3">
+												<li class="mega-menu-title"><a href="#"><div>Otomotif</div></a>
+													<ul>
+														<li><a href="{{route('motif', 'wuling')}}"><div>Wulings</div></a></li>
+														<li><a href="{{route('motif', 'masda')}}"><div>Mazda</div></a></li>
+														<li><a href="{{route('motif', 'honda')}}"><div>Honda</div></a></li>
+														<li><a href="{{route('motif', 'hyno')}}"><div>Hino</div></a></li>
+														<li><a href="{{route('motif', 'mercedes')}}"><div>Mercedez Benz</div></a></li>
+													</ul>
+												</li>
+											</ul>
+											<ul class="mega-menu-column col-lg-3">
+												<li class="mega-menu-title"><a href="#"><div>Properti</div></a>
+													<ul>
+														<li><a href="#"><div>Primewood</div></a></li>
+														<li><a href="#"><div>Retail</div></a></li>
+													</ul>
+												</li>
+											</ul>
+											<ul class="mega-menu-column col-lg-3">
+												<li class="mega-menu-title"><a href="#"><div>Trading</div></a>
+													<ul>
+														<li><a href="#"><div>Oil</div></a></li>
+														<li><a href="#"><div>Tire</div></a></li>
+													</ul>
+												</li>
+											</ul>
+											<ul class="mega-menu-column col-lg-3">
+												<li class="mega-menu-title"><a href="#"><div>Mining</div></a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="mega-menu"><a href="{{route('berita')}}"><div>Berita</div></a></li>
+									<li class="mega-menu"><a href="{{route('karir')}}"><div>Karir</div></a></li>
+									<li><a href="kontak.html"><div>Kontak</div></a></li>
 								</ul>
-							</li>
-							<li class="mega-menu current"><a href="#"><div>Unit Bisnis</div></a>
-								<div class="mega-menu-content style-2 clearfix">
-									<ul class="mega-menu-column col-lg-3">
-										<li class="mega-menu-title"><a href="#"><div>Otomotif</div></a>
-											<ul>
-												<li><a href="#"><div>Wulings</div></a></li>
-												<li><a href=#"><div>Mazda</div></a></li>
-												<li><a href="#"><div>Honda</div></a></li>
-												<li><a href="#"><div>Hino</div></a></li>
-												<li><a href="#"><div>Mercedez Benz</div></a></li>
-											</ul>
-										</li>
-									</ul>
-									<ul class="mega-menu-column col-lg-3">
-										<li class="mega-menu-title"><a href="#"><div>Properti</div></a>
-											<ul>
-												<li><a href="#"><div>Primewood</div></a></li>
-												<li><a href="#"><div>Retail</div></a></li>
-											</ul>
-										</li>
-									</ul>
-									<ul class="mega-menu-column col-lg-3">
-										<li class="mega-menu-title"><a href="#"><div>Trading</div></a>
-											<ul>
-												<li><a href="#"><div>Oil</div></a></li>
-												<li><a href="#"><div>Tire</div></a></li>
-											</ul>
-										</li>
-									</ul>
-									<ul class="mega-menu-column col-lg-3">
-										<li class="mega-menu-title"><a href="#"><div>Mining</div></a>
-										</li>
-									</ul>
-								</div>
-							</li>
-                            <li class="mega-menu"><a href="listberita.html"><div>Berita</div></a></li>
-							<li class="mega-menu"><a href="karir.html"><div>Karir</div></a></li>
-							<li><a href="kontak.html"><div>Kontak</div></a></li>
-						</ul>
-
-
-						<!-- Top Search
-						============================================= -->
-						<div id="top-search">
-							<a href="#"><img style="" src="images/eng.png" width="30" height="30" alt=""></a>
-						</div><!-- #top-search end -->
-
+		
+		
+								<!-- Top Search
+								============================================= -->
+								<div id="top-search">
+										<a href="#"><img style="" src="{{asset('images/eng.png')}}" width="30" height="30" alt=""></a>
+								</div><!-- #top-search end -->
 					</nav><!-- #primary-menu end -->
 
 				</div>
@@ -149,17 +148,15 @@
 					<div class="container clearfix">	
 
 						 <div class="col_two_fifth">
-                            <img src="images/otomotif/1.png" alt=""  data-animate="fadeInRight">
+                            <img src="{{asset('img/automotif/'.$data->gambar)}}" alt=""  data-animate="fadeInRight">
 						</div>
 
 						<div class="col_three_fifth  col_last">
 						    <div>
-								<h4 style=" color:#C02942" data-animate="fadeInDown">Tentang Mazda CX-5 </h4>
+							<h4 style=" color:#C02942" data-animate="fadeInDown">Tentang {{$data->nama}}</h4>
 							</div>
 
-							<p align="justify"  data-animate="fadeInLeft">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi velit 
-                                soluta pariatur ratione porro voluptatem nihil maiores iusto, perspiciatis, nulla, qui dicta quasi cumque expedita? Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint enim omnis provident porro assumenda ex facere,
-                                 nulla dicta magnam quam id atque. Exercitationem, totam dolore harum suscipit, consequatur veniam iste iure corporis quaerat tempora in libero delectus hic? Distinctio cupiditate obcaecati quidem doloremque harum necessitatibus quibusdam aliquam! Eius, error fuga?</p>
+						<p align="justify"  data-animate="fadeInLeft">{{$data->deskripsi}}</p>
                         </div>
 
                     </div>
@@ -226,14 +223,6 @@
 																<label for="notelpkantor">No Telepon kantor anda: </label>
 																<input type="text" class="form-control" id="notelpkantor" placeholder="No telepon kantor anda">
 															</div>
-															<div class="form-group">
-																<div class="form-check">
-																	<input class="form-check-input" type="checkbox" id="gridCheck">
-																	<label class="form-check-label" for="gridCheck">
-																		Bersedia  menerima newsletter Kumala Group
-																	</label>
-																</div>
-															</div>
 															<button type="submit" class="button button-3d button-small button-rounded button-red">Kirim</button>
 														</form>
 													</div>
@@ -290,14 +279,6 @@
 																	<option>Manado</option>
 																</select>
 															</div>
-															<div class="form-group">
-																<div class="form-check">
-																	<input class="form-check-input" type="checkbox" id="gridCheck">
-																	<label class="form-check-label" for="gridCheck">
-																		Bersedia  menerima newsletter Kumala Group
-																	</label>
-																</div>
-															</div>
 															<button type="submit" class="button button-3d button-small button-rounded button-red">Minta Penawaran</button>
 														</form>
 													</div>
@@ -311,14 +292,14 @@
 
                         <div class="row">
                             <div class="col-4 detail-list">
-                                <img src="images/otomotif/1.png" alt=""  data-animate="fadeInRight"> <br>
-                                <img style="margin-top: 30px;" src="images/otomotif/1.png" alt=""  data-animate="fadeInRight"> </br>
-                                <img style="margin-top: 30px;" src="images/otomotif/1.png" alt=""  data-animate="fadeInRight">
+                                <img src="{{asset('img/automotif/'.$data->gambar)}}" alt=""  data-animate="fadeInRight"> <br>
+                                <img style="margin-top: 30px;" src="{{asset('img/automotif/'.$data->gambar2)}}" alt=""  data-animate="fadeInRight"> </br>
+                                <img style="margin-top: 30px;" src="{{asset('img/automotif/'.$data->gambar3)}}" alt=""  data-animate="fadeInRight">
                             </div>
 
                             <div class="col-6 detail-img center">
-                                <h4>Honda CX-5</h4>
-                                <img src="images/otomotif/1.png" alt=""  data-animate="fadeInRight">       						
+                                <h4>{{$data->nama}}</h4>
+                                <img src="{{asset('img/automotif/'.$data->gambar)}}" alt=""  data-animate="fadeInRight">       						
                             </div>
                             <div class="col-2"></div>
                         </div>
@@ -359,12 +340,12 @@
 
 	<!-- External JavaScripts
 	============================================= -->
-	<script src="js/jquery.js"></script>
-	<script src="js/plugins.js"></script>
+	<script src="{{asset('js/jquery.js')}}"></script>
+	<script src="{{asset('js/plugins.js')}}"></script>
 
 	<!-- Footer Scripts
 	============================================= -->
-	<script src="js/functions.js"></script>
+	<script src="{{asset('js/functions.js')}}"></script>
 
 </body>
 </html>
