@@ -71,7 +71,7 @@
 										<div class="feature-box media-box" data-animate="fadeInDownBig">
 											<div class="flip">
 												<div class="front" style="background-image: url(https://images.unsplash.com/photo-1474244896358-ce3784088cc8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80)">
-												<h1 class="text-shadow">Trading</hi>
+												<h1 class="text-shadow">Otomotif</hi>
 												</div>
 												<div class="back">
 												<h2><a style="text-decoration:none;color: #fff !important;" href="{{route('oto')}}">Otomotif</a></h2>
