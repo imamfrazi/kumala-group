@@ -81,33 +81,128 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </li>
 
             @can('isAdmin')
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fa fa-cog green"></i>
-              <p>
-                Management
-                <i class="right fa fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <router-link to="/users" class="nav-link">
-                  <i class="fas fa-users nav-icon"></i>
-                  <p>Users</p>
-                </router-link>
-              </li>
+         
 
-            </ul>
-          </li>
-         @endcan
-          <li class="nav-item">
-                <router-link to="/profile" class="nav-link">
-                    <i class="nav-icon fas fa-user orange"></i>
-                    <p>
-                        Profile
-                    </p>
-                </router-link>
-         </li>
+
+         <li class="nav-item has-treeview">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fa fa-cog text-info"></i>
+            <p>
+              MANAGEMENT
+              <i class="fa fa-angle-left right"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <router-link to="/slider" class="nav-link">
+                <ion-icon name="albums"></ion-icon>
+                <p>
+                  Slider
+                </p>
+              </router-link>
+            </li>
+            <li class="nav-item">
+              <router-link to="/berita" class="nav-link">
+                <i class="nav-icon fa fa-envelope-o"></i>
+                <p>Berita & Promo</p>
+              </router-link>
+            </li>
+            <li class="nav-item">
+              <router-link to="/karir" class="nav-link">
+                <ion-icon name="briefcase"></ion-icon>
+                <p>Karir</p>
+              </router-link>
+            </li>
+            <li class="nav-item">
+              <router-link to="/users" class="nav-link">
+                <i class="fas fa-users nav-icon"></i>
+                <p>Admin</p>
+              </router-link>
+            </li>
+            <li class="nav-item">
+              <router-link to="/partner" class="nav-link">
+                <ion-icon name="apps"></ion-icon>
+                <p>
+                  Partnership / Product
+                </p>
+              </router-link>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item has-treeview">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fa fa-envelope-o text-info"></i>
+            <p>
+              REPORT
+              <i class="fa fa-angle-left right"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <router-link to="drive" class="nav-link">
+                <ion-icon name="help-buoy"></ion-icon>
+                <p>Test drive</p>
+              </router-link>
+            </li>
+            <li class="nav-item">
+              <router-link to="/incoming" class="nav-link">
+                <i class="fa fa-shopping-cart"></i>
+                <p>Incoming</p>
+              </router-link>
+            </li>
+            <li class="nav-item">
+              <router-link to="/career" class="nav-link">
+                <ion-icon name="briefcase"></ion-icon>
+                <p>Karir</p>
+              </router-link>
+            </li>
+          </ul>
+        </li>
+        @endcan
+        <li class="nav-item has-treeview">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fa fa-plus-square-o text-info"></i>
+            <p>
+              UNIT BISNIS
+              <i class="fa fa-angle-left right"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item ">
+              <router-link to="/automotif" class="nav-link">
+                <ion-icon name="logo-model-s"></ion-icon>
+                <p>
+                  Automotive
+                </p>
+              </router-link>
+            </li>
+            <li class="nav-item ">
+              <router-link to="/trading" class="nav-link">
+                <ion-icon name="move"></ion-icon>
+                <p>
+                  Trading
+                </p>
+              </router-link>
+            </li>
+            <li class="nav-item">
+              <router-link to="/mining" class="nav-link">
+                <ion-icon name="hammer"></ion-icon>
+                <p>
+                  Mining
+                </p>
+              </router-link>
+            </li>
+            <li class="nav-item">
+              <router-link to="/property" class="nav-link">
+                <ion-icon name="gift"></ion-icon>
+                <p>
+                  Property
+                </p>
+              </router-link>
+            </li>
+          </ul>
+        </li>
 
           <li class="nav-item">
                 <a class="nav-link" href="{{ route('logout') }}"

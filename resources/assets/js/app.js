@@ -48,8 +48,17 @@ Vue.use(VueProgressBar, {
 let routes = [
     { path: '/dashboard', component: require('./components/Dashboard.vue') },
     { path: '/users', component: require('./components/Users.vue') },
-    { path: '/profile', component: require('./components/Profile.vue') },
-    { path: '*', component: require('./components/NotFound.vue') }
+    { path: "/slider", component: require("./components/slider/Slider.vue") },
+    { path: "/berita", component: require("./components/berita/Buat.vue") },
+    { path: "/karir", component: require("./components/karir/Buat.vue") },
+    { path: "/partner", component: require("./components/partner/Partnership.vue") },
+    { path: "/drive", component: require("./components/testdrive/list.vue") },
+    { path: "/incoming", component: require("./components/incoming/list.vue") },
+    { path: "/career", component: require("./components/karir/list.vue") },
+    { path: "/automotif", component: require("./components/unit/Automotive.vue") },
+    { path: "/trading", component: require("./components/unit/Trading.vue") },
+    { path: "/mining", component: require("./components/unit/Mining.vue") },
+    { path: "/property", component: require("./components/unit/Property.vue") },
   ]
 
 const router = new VueRouter({
