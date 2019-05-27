@@ -36,7 +36,7 @@ class SliderController extends Controller
 
         $name = time().'.' . explode('/', explode(':', substr($request->gambar, 0, strpos($request->gambar, ';')))[1])[1];
 
-        \Image::make($request->gambar)->save(public_path('img/slider/').$name,60);
+        \Image::make($request->gambar)->save('/img/slider/'.$name,60);
          $request->merge(['gambar' => $name]);
 
         return Slider::create([
@@ -81,10 +81,10 @@ class SliderController extends Controller
         if($request->gambar != $currentPhoto){
             $name = time().'.' . explode('/', explode(':', substr($request->gambar, 0, strpos($request->gambar, ';')))[1])[1];
 
-            \Image::make($request->gambar)->save(public_path('img/slider/').$name,60);
+            \Image::make($request->gambar)->save('img/slider/'.$name,60);
             $request->merge(['gambar' => $name]);
 
-            $gambar = public_path('img/slider/').$currentPhoto;
+            $gambar = 'img/slider/'.$currentPhoto;
             if(file_exists($gambar)){
                 @unlink($gambar);
             }
@@ -109,7 +109,7 @@ class SliderController extends Controller
 
         //hapus foto yg terkait dengan db
         $currentPhoto = $slider->gambar;
-        $gambar = public_path('img/slider/').$currentPhoto;
+        $gambar = 'img/slider/'.$currentPhoto;
         if(file_exists($gambar)){
             @unlink($gambar);
         }

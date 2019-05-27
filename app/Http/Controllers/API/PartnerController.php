@@ -30,7 +30,7 @@ class PartnerController extends Controller
 
         $name = time().'.' . explode('/', explode(':', substr($request->gambar, 0, strpos($request->gambar, ';')))[1])[1];
 
-        \Image::make($request->gambar)->save(public_path('img/partner/').$name,60);
+        \Image::make($request->gambar)->save('img/partner/'.$name,60);
         $request->merge(['gambar' => $name]);
         return Partner::create([
             'gambar' => $request['gambar']
@@ -56,10 +56,10 @@ class PartnerController extends Controller
         if($request->gambar != $currentPhoto){
             $name = time().'.' . explode('/', explode(':', substr($request->gambar, 0, strpos($request->gambar, ';')))[1])[1];
 
-            \Image::make($request->gambar)->save(public_path('img/partner/').$name,60);
+            \Image::make($request->gambar)->save('img/partner/'.$name,60);
             $request->merge(['gambar' => $name]);
 
-            $gambar = public_path('img/partner/').$currentPhoto;
+            $gambar = 'img/partner/'.$currentPhoto;
             if(file_exists($gambar)){
                 @unlink($gambar);
             }
@@ -84,7 +84,7 @@ class PartnerController extends Controller
 
         //hapus foto yg terkait dengan db
         $currentPhoto = $partner->gambar;
-        $gambar = public_path('img/slider/').$currentPhoto;
+        $gambar = 'img/partner/'.$currentPhoto;
         if(file_exists($gambar)){
             @unlink($gambar);
         }

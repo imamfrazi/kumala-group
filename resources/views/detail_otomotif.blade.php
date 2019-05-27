@@ -66,7 +66,7 @@
 
 						<ul>
 							<li><a href="/">
-									<div>Home</div>
+									<div>Beranda</div>
 								</a>
 							</li>
 							<li><a href="{{route('about')}}">
@@ -153,7 +153,7 @@
 							<li class="mega-menu"><a href="{{route('karir')}}">
 									<div>Karir</div>
 								</a></li>
-							<li><a href="kontak.html">
+							<li><a href="{{route('kontak')}}">
 									<div>Kontak</div>
 								</a></li>
 						</ul>

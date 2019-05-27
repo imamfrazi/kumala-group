@@ -11,7 +11,8 @@ use App\Automotif as A;
 
 class KumalaController extends Controller
 {
-    public function index() {
+    public function index()
+    {
         $slide = S::latest()->get();
         $berita = B::latest()->paginate(4);
         $partner = P::latest()->get();
@@ -19,27 +20,30 @@ class KumalaController extends Controller
         return view('inde')->withSlides($slide)->withBerita($berita)->withPartner($partner);
     }
 
-    public function berita() {
+    public function berita()
+    {
         $berita = B::latest()->paginate(6);
 
         return view('listberita')->withBerita($berita);
     }
 
-    public function karir() {
+    public function karir()
+    {
         $karir = K::latest()->paginate(6);
 
         return view('karir')->withKarir($karir);
     }
 
-    public function otomotif() {
+    public function otomotif()
+    {
 
         return view('otomotif');
     }
 
-    public function oto($oto) {
+    public function oto($oto)
+    {
 
-        if($oto =='masda' || $oto =='wuling' || $oto =='honda' || $oto =='hyno' || $oto =='mercedes')
-        {
+        if ($oto == 'masda' || $oto == 'wuling' || $oto == 'honda' || $oto == 'hyno' || $oto == 'mercedes') {
             $data = A::where('merek', $oto)->latest()->paginate(9);
             $nama = A::where('merek', $oto)->latest()->first();
 
@@ -49,9 +53,17 @@ class KumalaController extends Controller
         return abort(404);
     }
 
-    public function otom($id) {
+    public function otom($id)
+    {
         $data = A::findOrFail($id);
-        
+
         return view('detail_otomotif')->withData($data);
+    }
+
+    public function beritaja($id)
+    {
+        $data = B::findOrFail($id);
+
+        return view('detail_berita')->withData($data);
     }
 }

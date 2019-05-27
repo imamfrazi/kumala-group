@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
+
 <head>
 
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -44,10 +45,10 @@
 					<!-- Logo
 					============================================= -->
 					<div id="logo">
-							<a href="/" class="standard-logo" data-dark-logo="{{asset('images/logo-dark.png')}}"><img src="{{asset('images/logo/logo.png')}}" alt="Canvas Logo"></a>
-							<div class="retina-logo">
-								<a href="/" class="retina-logo" data-dark-logo="{{asset('images/logo-dark@2x.png')}}"><img src="{{asset('images/logo/logo.png')}}" alt="Canvas Logo"></a>			
-							</div>
+						<a href="/" class="standard-logo" data-dark-logo="{{asset('images/logo-dark.png')}}"><img src="{{asset('images/logo/logo.png')}}" alt="Canvas Logo"></a>
+						<div class="retina-logo">
+							<a href="/" class="retina-logo" data-dark-logo="{{asset('images/logo-dark@2x.png')}}"><img src="{{asset('images/logo/logo.png')}}" alt="Canvas Logo"></a>
+						</div>
 					</div><!-- #logo end -->
 
 					<!-- Primary Navigation
@@ -55,53 +56,97 @@
 					<nav id="primary-menu">
 
 						<ul>
-							<li><a href="/"><div>Home</div></a>
+							<li><a href="/">
+									<div>Beranda</div>
+								</a>
 							</li>
-						<li><a href="{{route('about')}}"><div>Tentang Kami</div></a>
+							<li><a href="{{route('about')}}">
+									<div>Tentang Kami</div>
+								</a>
 								<ul>
-									<li><a href="{{route('about')}}"><div><i class="icon-gift"></i>Sejarah</div></a></li>
-									<li><a href="{{route('about')}}"><div><i class="icon-umbrella"></i>Visi & Misi</div></a></li>
-									<li><a href="{{route('about')}}"><div><i class="icon-wpforms"></i>BOD</div></a></li>
+									<li><a href="{{route('about')}}">
+											<div><i class="icon-gift"></i>Sejarah</div>
+										</a></li>
+									<li><a href="{{route('about')}}">
+											<div><i class="icon-umbrella"></i>Visi & Misi</div>
+										</a></li>
+									<li><a href="{{route('about')}}">
+											<div><i class="icon-wpforms"></i>BOD</div>
+										</a></li>
 								</ul>
 							</li>
-							<li class="mega-menu"><a href="#"><div>Unit Bisnis</div></a>
+							<li class="mega-menu"><a href="#">
+									<div>Unit Bisnis</div>
+								</a>
 								<div class="mega-menu-content style-2 clearfix">
 									<ul class="mega-menu-column col-lg-3">
-										<li class="mega-menu-title"><a href="{{route('oto')}}"><div>Otomotif</div></a>
+										<li class="mega-menu-title"><a href="{{route('oto')}}">
+												<div>Otomotif</div>
+											</a>
 											<ul>
-													<li><a href="{{route('motif', 'wuling')}}"><div>Wulings</div></a></li>
-													<li><a href="{{route('motif', 'masda')}}"><div>Mazda</div></a></li>
-													<li><a href="{{route('motif', 'honda')}}"><div>Honda</div></a></li>
-													<li><a href="{{route('motif', 'hyno')}}"><div>Hino</div></a></li>
-													<li><a href="{{route('motif', 'mercedes')}}"><div>Mercedez Benz</div></a></li>
+												<li><a href="{{route('motif', 'wuling')}}">
+														<div>Wulings</div>
+													</a></li>
+												<li><a href="{{route('motif', 'masda')}}">
+														<div>Mazda</div>
+													</a></li>
+												<li><a href="{{route('motif', 'honda')}}">
+														<div>Honda</div>
+													</a></li>
+												<li><a href="{{route('motif', 'hyno')}}">
+														<div>Hino</div>
+													</a></li>
+												<li><a href="{{route('motif', 'mercedes')}}">
+														<div>Mercedez Benz</div>
+													</a></li>
 											</ul>
 										</li>
 									</ul>
 									<ul class="mega-menu-column col-lg-3">
-										<li class="mega-menu-title"><a href="#"><div>Properti</div></a>
+										<li class="mega-menu-title"><a href="#">
+												<div>Properti</div>
+											</a>
 											<ul>
-												<li><a href="#"><div>Primewood</div></a></li>
-												<li><a href="#"><div>Retail</div></a></li>
+												<li><a href="#">
+														<div>Primewood</div>
+													</a></li>
+												<li><a href="#">
+														<div>Retail</div>
+													</a></li>
 											</ul>
 										</li>
 									</ul>
 									<ul class="mega-menu-column col-lg-3">
-										<li class="mega-menu-title"><a href="#"><div>Trading</div></a>
+										<li class="mega-menu-title"><a href="#">
+												<div>Trading</div>
+											</a>
 											<ul>
-												<li><a href="#"><div>Oil</div></a></li>
-												<li><a href="#"><div>Tire</div></a></li>
+												<li><a href="#">
+														<div>Oil</div>
+													</a></li>
+												<li><a href="#">
+														<div>Tire</div>
+													</a></li>
 											</ul>
 										</li>
 									</ul>
 									<ul class="mega-menu-column col-lg-3">
-										<li class="mega-menu-title"><a href="#"><div>Mining</div></a>
+										<li class="mega-menu-title"><a href="#">
+												<div>Mining</div>
+											</a>
 										</li>
 									</ul>
 								</div>
 							</li>
-                            <li class="mega-menu current"><a href="#"><div>Berita</div></a></li>
-							<li class="mega-menu"><a href="{{route('karir')}}"><div>Karir</div></a></li>
-							<li><a href="kontak.html"><div>Kontak</div></a></li>
+							<li class="mega-menu current"><a href="#">
+									<div>Berita</div>
+								</a></li>
+							<li class="mega-menu"><a href="{{route('karir')}}">
+									<div>Karir</div>
+								</a></li>
+							<li><a href="{{route('kontak')}}">
+									<div>Kontak</div>
+								</a></li>
 						</ul>
 
 
@@ -148,36 +193,36 @@
 						@foreach ($berita as $item)
 						<div class="entry clearfix">
 							<div class="entry-image">
-							<a href="detail_berita.html"><img style="height: 200px" class="image_fade" src="{{asset('img/berita/'.$item['gambar'])}}" alt="Image"></a>
+								<a href="{{route('single', $item->id)}}"><img style="height: 200px" class="image_fade" src="{{asset('img/berita/'.$item['gambar'])}}" alt="Image"></a>
 							</div>
 							<div class="entry-title">
-							<h3>{{$item->judul}}</h3>
+								<h3>{{$item->judul}}</h3>
 							</div>
 							<ul class="entry-meta clearfix">
 								<li><i class="icon-calendar3"></i>{{date_format($item->updated_at, "d F Y")}}</li>
 								@if($item->type == "berita")
-									<li><span class="badge badge-secondary">Berita</span></li>
-									@else
-									<li><span class="badge badge-info">Promo</span></li>
-									@endif
+								<li><span class="badge badge-secondary">Berita</span></li>
+								@else
+								<li><span class="badge badge-info">Promo</span></li>
+								@endif
 							</ul>
 							<div class="entry-content">
-							<p>{{substr($item->deskripsi,0, 60)}}...<a href="{{route('db')}}">Lebih lanjut. </a></p>
-                            </div>
-                        </div>
+								<p>{{substr($item->deskripsi,0, 60)}}...<a href="{{route('single', $item->id)}}">Lebih lanjut. </a></p>
+							</div>
+						</div>
 						@endforeach
-						
+
 					</div><!-- #posts end -->
 
 					<div class="row">
-                        <div class="col-12">
+						<div class="col-12">
 							<nav aria-label="Page navigation example">
 								<ul class="pagination justify-content-center">
 									{{$berita->links()}}
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
+								</ul>
+							</nav>
+						</div>
+					</div>
 
 				</div>
 
@@ -221,4 +266,5 @@
 	<script src="{{asset('js/functions.js')}}"></script>
 
 </body>
+
 </html>

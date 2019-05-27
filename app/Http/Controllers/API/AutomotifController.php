@@ -53,16 +53,16 @@ class AutomotifController extends Controller
         $name = time().'.' . explode('/', explode(':', substr($request->gambar, 0, strpos($request->gambar, ';')))[1])[1];
         $brocure = time().'.' . explode('/', explode(':', substr($request->brocure, 0, strpos($request->brocure, ';')))[1])[1];
         
-        \Image::make($request->gambar)->save(public_path('img/automotif/').$name,60);
+        \Image::make($request->gambar)->save('img/automotif/'.$name,60);
     
             $name2 = time().'.' . explode('/', explode(':', substr($request->gambar2, 0, strpos($request->gambar2, ';')))[1])[1];
-            \Image::make($request->gambar2)->save(public_path('img/automotif/').$name2,60);
+            \Image::make($request->gambar2)->save('img/automotif/'.$name2,60);
             $request->merge(['gambar2' => $name2]);
         
     
             $name3 = time().'.' . explode('/', explode(':', substr($request->gambar3, 0, strpos($request->gambar3, ';')))[1])[1];
-            \Image::make($request->gambar3)->save(public_path('img/automotif/').$name3,60);
-            \Image::make($request->brocure)->save(public_path('img/automotif/').$brocure,60);
+            \Image::make($request->gambar3)->save('img/automotif/'.$name3,60);
+            \Image::make($request->brocure)->save('img/automotif/'.$brocure,60);
             $request->merge(['gambar3' => $name2]);
             $request->merge(['brocure' => $brocure]);
         
@@ -138,10 +138,10 @@ class AutomotifController extends Controller
         if($request->gambar != $currentPhoto){
             $name = time().'.' . explode('/', explode(':', substr($request->gambar, 0, strpos($request->gambar, ';')))[1])[1];
 
-            \Image::make($request->gambar)->save(public_path('img/automotif/').$name,60);
+            \Image::make($request->gambar)->save('img/automotif/'.$name,60);
             $request->merge(['gambar' => $name]);
 
-            $gambar = public_path('img/automotif/').$currentPhoto;
+            $gambar = 'img/automotif/'.$currentPhoto;
             if(file_exists($gambar)){
                 @unlink($gambar);
             }
@@ -149,10 +149,10 @@ class AutomotifController extends Controller
         if($request->gambar2 != $currentPhoto2){
             $name = time().'.' . explode('/', explode(':', substr($request->gambar2, 0, strpos($request->gambar2, ';')))[1])[1];
 
-            \Image::make($request->gambar2)->save(public_path('img/automotif/').$name,60);
+            \Image::make($request->gambar2)->save('img/automotif/'.$name,60);
             $request->merge(['gambar2' => $name]);
 
-            $gambar = public_path('img/automotif/').$currentPhoto2;
+            $gambar = 'img/automotif/'.$currentPhoto2;
             if(file_exists($gambar)){
                 @unlink($gambar);
             }
@@ -160,10 +160,10 @@ class AutomotifController extends Controller
         if($request->gambar3 != $currentPhoto3){
             $name = time().'.' . explode('/', explode(':', substr($request->gambar3, 0, strpos($request->gambar3, ';')))[1])[1];
 
-            \Image::make($request->gambar3)->save(public_path('img/automotif/').$name,60);
+            \Image::make($request->gambar3)->save('img/automotif/'.$name,60);
             $request->merge(['gambar3' => $name]);
 
-            $gambar = public_path('img/automotif/').$currentPhoto3;
+            $gambar = 'img/automotif/'.$currentPhoto3;
             if(file_exists($gambar)){
                 @unlink($gambar);
             }

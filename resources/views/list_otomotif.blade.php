@@ -55,7 +55,7 @@
 					<nav id="primary-menu">
 
 						<ul>
-							<li><a href="/"><div>Home</div></a>
+							<li><a href="/"><div>Beranda</div></a>
 							</li>
 							<li><a href="{{route('about')}}"><div>Tentang Kami</div></a>
 								<ul>
@@ -101,7 +101,7 @@
 							</li>
                             <li class="mega-menu"><a href="{{route('berita')}}"><div>Berita</div></a></li>
 							<li class="mega-menu"><a href="{{route('karir')}}"><div>Karir</div></a></li>
-							<li><a href="kontak.html"><div>Kontak</div></a></li>
+							<li><a href="{{route('kontak')}}"><div>Kontak</div></a></li>
 						</ul>
 
 
