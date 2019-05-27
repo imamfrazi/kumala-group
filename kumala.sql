@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Waktu pembuatan: 26 Bulan Mei 2019 pada 15.44
+-- Waktu pembuatan: 27 Bulan Mei 2019 pada 15.25
 -- Versi server: 5.7.23
 -- Versi PHP: 7.2.8
 
@@ -115,6 +115,13 @@ CREATE TABLE `karirs` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data untuk tabel `karirs`
+--
+
+INSERT INTO `karirs` (`id`, `position`, `jumlah`, `deskripsi`, `desc`, `created_at`, `updated_at`) VALUES
+(1, 'Sales', 5, 'Kami Membutuhkan Sales', 'Kami Membutuhkan Sales', '2019-05-26 19:18:34', '2019-05-26 19:18:34');
 
 -- --------------------------------------------------------
 
@@ -284,7 +291,6 @@ CREATE TABLE `partners` (
 --
 
 INSERT INTO `partners` (`id`, `gambar`, `created_at`, `updated_at`) VALUES
-(1, '1558883384.png', '2019-05-26 07:09:44', '2019-05-26 07:09:44'),
 (2, '1558883413.jpeg', '2019-05-26 07:10:13', '2019-05-26 07:10:13');
 
 -- --------------------------------------------------------
@@ -362,7 +368,8 @@ CREATE TABLE `sliders` (
 
 INSERT INTO `sliders` (`id`, `judul`, `deskripsi`, `gambar`, `created_at`, `updated_at`) VALUES
 (2, 'Modern Design interior', 'You\'ll be surprised to see the Final Results of your Creation &amp; would crave for more.', '1558883185.jpeg', '2019-05-26 07:06:25', '2019-05-26 07:06:25'),
-(3, 'New Mercedes-Benz interior', 'Create just what you need for your Perfect Website. Choose from a wide range of Elements &amp; simply put them on our Canvas.', '1558883242.jpeg', '2019-05-26 07:07:22', '2019-05-26 07:07:22');
+(3, 'New Mercedes-Benz interior', 'Create just what you need for your Perfect Website. Choose from a wide range of Elements &amp; simply put them on our Canvas.', '1558883242.jpeg', '2019-05-26 07:07:22', '2019-05-26 07:07:22'),
+(4, 'All New Honda Modulo', 'qwettyyCreate just what you need for your Perfect Website. Choose from a wide range of Elements &amp; simply put them on our Canvas.', '1558905104.jpeg', '2019-05-26 11:44:24', '2019-05-26 13:12:02');
 
 -- --------------------------------------------------------
 
@@ -570,7 +577,7 @@ ALTER TABLE `automotifs`
 -- AUTO_INCREMENT untuk tabel `beritas`
 --
 ALTER TABLE `beritas`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `comes`
@@ -582,7 +589,7 @@ ALTER TABLE `comes`
 -- AUTO_INCREMENT untuk tabel `karirs`
 --
 ALTER TABLE `karirs`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `migrations`
@@ -630,7 +637,7 @@ ALTER TABLE `properties`
 -- AUTO_INCREMENT untuk tabel `sliders`
 --
 ALTER TABLE `sliders`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `test_drives`

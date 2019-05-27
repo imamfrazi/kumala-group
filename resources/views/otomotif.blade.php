@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
+
 <head>
 
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -46,7 +47,7 @@
 					<div id="logo">
 						<a href="/" class="standard-logo" data-dark-logo="{{asset('images/logo-dark.png')}}"><img src="{{asset('images/logo/logo.png')}}" alt="Canvas Logo"></a>
 						<div class="retina-logo">
-							<a href="/" class="retina-logo" data-dark-logo="{{asset('images/logo-dark@2x.png')}}"><img src="{{asset('images/logo/logo.png')}}" alt="Canvas Logo"></a>			
+							<a href="/" class="retina-logo" data-dark-logo="{{asset('images/logo-dark@2x.png')}}"><img src="{{asset('images/logo/logo.png')}}" alt="Canvas Logo"></a>
 						</div>
 					</div><!-- #logo end -->
 
@@ -55,60 +56,104 @@
 					<nav id="primary-menu">
 
 						<ul>
-							<li><a href="/"><div>Beranda</div></a>
+							<li><a href="/">
+									<div>Beranda</div>
+								</a>
 							</li>
-						<li><a href="{{route('about')}}"><div>Tentang Kami</div></a>
+							<li><a href="{{route('about')}}">
+									<div>Tentang Kami</div>
+								</a>
 								<ul>
-									<li><a href="{{route('about')}}"><div><i class="icon-gift"></i>Sejarah</div></a></li>
-									<li><a href="{{route('about')}}"><div><i class="icon-umbrella"></i>Visi & Misi</div></a></li>
-									<li><a href="{{route('about')}}"><div><i class="icon-wpforms"></i>BOD</div></a></li>
+									<li><a href="{{route('about')}}">
+											<div><i class="icon-gift"></i>Sejarah</div>
+										</a></li>
+									<li><a href="{{route('about')}}">
+											<div><i class="icon-umbrella"></i>Visi & Misi</div>
+										</a></li>
+									<li><a href="{{route('about')}}">
+											<div><i class="icon-wpforms"></i>BOD</div>
+										</a></li>
 								</ul>
 							</li>
-							<li class="mega-menu current"><a href="#"><div>Unit Bisnis</div></a>
+							<li class="mega-menu current"><a href="#">
+									<div>Unit Bisnis</div>
+								</a>
 								<div class="mega-menu-content style-2 clearfix">
 									<ul class="mega-menu-column col-lg-3">
-										<li class="mega-menu-title"><a href="#"><div>Otomotif</div></a>
+										<li class="mega-menu-title"><a href="#">
+												<div>Otomotif</div>
+											</a>
 											<ul>
-												<li><a href="{{route('motif', 'wuling')}}"><div>Wulings</div></a></li>
-												<li><a href="{{route('motif', 'masda')}}"><div>Mazda</div></a></li>
-												<li><a href="{{route('motif', 'honda')}}"><div>Honda</div></a></li>
-												<li><a href="{{route('motif', 'hyno')}}"><div>Hino</div></a></li>
-												<li><a href="{{route('motif', 'mercedes')}}"><div>Mercedez Benz</div></a></li>
+												<li><a href="{{route('motif', 'wuling')}}">
+														<div>Wulings</div>
+													</a></li>
+												<li><a href="{{route('motif', 'masda')}}">
+														<div>Mazda</div>
+													</a></li>
+												<li><a href="{{route('motif', 'honda')}}">
+														<div>Honda</div>
+													</a></li>
+												<li><a href="{{route('motif', 'hyno')}}">
+														<div>Hino</div>
+													</a></li>
+												<li><a href="{{route('motif', 'mercedes')}}">
+														<div>Mercedez Benz</div>
+													</a></li>
 											</ul>
 										</li>
 									</ul>
 									<ul class="mega-menu-column col-lg-3">
-										<li class="mega-menu-title"><a href="#"><div>Properti</div></a>
+										<li class="mega-menu-title"><a href="#">
+												<div>Properti</div>
+											</a>
 											<ul>
-												<li><a href="#"><div>Primewood</div></a></li>
-												<li><a href="#"><div>Retail</div></a></li>
+												<li><a href="#">
+														<div>Primewood</div>
+													</a></li>
+												<li><a href="#">
+														<div>Retail</div>
+													</a></li>
 											</ul>
 										</li>
 									</ul>
 									<ul class="mega-menu-column col-lg-3">
-										<li class="mega-menu-title"><a href="#"><div>Trading</div></a>
+										<li class="mega-menu-title"><a href="#">
+												<div>Trading</div>
+											</a>
 											<ul>
-												<li><a href="#"><div>Oil</div></a></li>
-												<li><a href="#"><div>Tire</div></a></li>
+												<li><a href="#">
+														<div>Oil</div>
+													</a></li>
+												<li><a href="#">
+														<div>Tire</div>
+													</a></li>
 											</ul>
 										</li>
 									</ul>
 									<ul class="mega-menu-column col-lg-3">
-										<li class="mega-menu-title"><a href="#"><div>Mining</div></a>
+										<li class="mega-menu-title"><a href="#">
+												<div>Mining</div>
+											</a>
 										</li>
 									</ul>
 								</div>
 							</li>
-                            <li class="mega-menu"><a href="{{route('berita')}}"><div>Berita</div></a></li>
-							<li class="mega-menu"><a href="{{route('karir')}}"><div>Karir</div></a></li>
-							<li><a href="{{route('kontak')}}"><div>Kontak</div></a></li>
+							<li class="mega-menu"><a href="{{route('berita')}}">
+									<div>Berita</div>
+								</a></li>
+							<li class="mega-menu"><a href="{{route('karir')}}">
+									<div>Karir</div>
+								</a></li>
+							<li><a href="{{route('kontak')}}">
+									<div>Kontak</div>
+								</a></li>
 						</ul>
 
 
 						<!-- Top Search
 						============================================= -->
 						<div id="top-search">
-								<a href="#"><img style="" src="{{asset('images/eng.png')}}" width="30" height="30" alt=""></a>
+							<a href="#"><img style="" src="{{asset('images/eng.png')}}" width="30" height="30" alt=""></a>
 						</div><!-- #top-search end -->
 
 					</nav><!-- #primary-menu end -->
@@ -134,111 +179,112 @@
 		<section id="content">
 
 			<div class="content-wrap">
-				
-                    <!-- <div class="heading-block notopmargin notopborder center">
+
+				<!-- <div class="heading-block notopmargin notopborder center">
 							<h3 data-animate="fadeInDown">Bisnis Otomotif </h3>
 					</div> -->
 
-					<div class="container clearfix">	
+				<div class="container clearfix">
 
-						 <div class="col_one center">
+					<div class="col_one center">
 
-							<div>
-								<h2  data-animate="fadeInDown">Tentang <span>Bisnis</span> Otomotif </h2>
-							</div>
-
-							<p align="justify"  data-animate="fadeInLeft">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi velit 
-                                soluta pariatur ratione porro voluptatem nihil maiores iusto, perspiciatis, nulla, qui dicta quasi cumque expedita? Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint enim omnis provident porro assumenda ex facere,
-                                 nulla dicta magnam quam id atque. Exercitationem, totam dolore harum suscipit, consequatur veniam iste iure corporis quaerat tempora in libero delectus hic? Distinctio cupiditate obcaecati quidem doloremque harum necessitatibus quibusdam aliquam! Eius, error fuga?</p>
+						<div>
+							<h2 data-animate="fadeInDown">Tentang <span>Bisnis</span> Otomotif </h2>
 						</div>
 
-						<!-- <div class="col_two_fifth  col_last">
+						<p align="justify" data-animate="fadeInLeft">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi velit
+							soluta pariatur ratione porro voluptatem nihil maiores iusto, perspiciatis, nulla, qui dicta quasi cumque expedita? Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint enim omnis provident porro assumenda ex facere,
+							nulla dicta magnam quam id atque. Exercitationem, totam dolore harum suscipit, consequatur veniam iste iure corporis quaerat tempora in libero delectus hic? Distinctio cupiditate obcaecati quidem doloremque harum necessitatibus quibusdam aliquam! Eius, error fuga?</p>
+					</div>
+
+					<!-- <div class="col_two_fifth  col_last">
 								<img src="images/about/3.jpg" alt=""  data-animate="fadeInRight">
 						</div> -->
 
-                    </div>
+				</div>
 
-					<div class="container clearfix topmargin">
-							<div class="row">
-									<div class="col-lg-1"></div>
+				<div class="container clearfix topmargin">
+					<div class="row">
+						<div class="col-lg-1"></div>
 
-									<div class="col-lg-1"></div>
-									<!-- Instructors 1
+						<div class="col-lg-1"></div>
+						<!-- Instructors 1
 									============================================= -->
-									<div class="col-lg-3">
-										<div class="feature-box hover-effect shadow-sm fbox-center fbox-bg fbox-light fbox-effect">
-											<div class="fbox-icon">
-												<a href="{{route('motif', 'mercedes')}}"><i><img src="{{asset('images/clients/clients-4.jpg')}}" class="noborder nobg shadow-sm" style="z-index: 2;" alt=""></i></a>
-											</div>
-											<a href="{{route('motif', 'mercedes')}}" class="button button-rounded button-reveal button-medium button-red tright"><i class="icon-angle-right"></i><span>Mercedez Benz</span></a>
-											
-										</div>
-									</div>
-		
-									<!-- Instructors 2
-									============================================= -->
-									<div class="col-lg-3">
-										<div class="feature-box hover-effect shadow-sm fbox-center fbox-bg fbox-light fbox-effect">
-											<div class="fbox-icon">
-												<a href="{{route('motif', 'masda')}}"><i><img src="{{asset('images/clients/clients-3.jpg')}}" class="noborder nobg shadow-sm" style="z-index: 2;" alt=""></i></a>
-											</div>
-										<a href="{{route('motif', 'masda')}}" class="button button-rounded button-reveal button-medium button-red tright"><i class="icon-angle-right"></i><span>Mazda</span></a>
-											
-										</div>
-									</div>
-		
-									<!-- Instructors 3
-									============================================= -->
-									<div class="col-lg-3">
-										<div class="feature-box hover-effect shadow-sm fbox-center fbox-bg fbox-light fbox-effect">
-											<div class="fbox-icon">
-												<a href="{{route('motif', 'wuling')}}"><i><img src="{{asset('images/clients/clients-5.jpg')}}" class="noborder nobg shadow-sm" style="z-index: 2;" alt=""></i></a>
-											</div>
-											<a href="{{route('motif', 'wuling')}}" class="button button-rounded button-reveal button-medium button-red tright"><i class="icon-angle-right"></i><span>Wuling</span></a>
-											
-										</div>
-									</div>
-									<div class="col-lg-1"></div>
-									
-									
+						<div class="col-lg-3">
+							<div class="feature-box hover-effect shadow-sm fbox-center fbox-bg fbox-light fbox-effect">
+								<div class="fbox-icon">
+									<a href="{{route('motif', 'honda')}}"><i><img src="{{asset('images/clients/clients-2.png')}}" class="noborder nobg shadow-sm" style="z-index: 2;" alt=""></i></a>
+								</div>
+								<a href="{{route('motif', 'honda')}}" class="button button-rounded button-reveal button-medium button-red tright"><i class="icon-angle-right"></i><span>Honda</span></a>
+
 							</div>
-					</div>
+						</div>
 
-					<div class="container clearfix topmargin bottommargin">
-							<div class="row">
-									<div class="col-lg-3"></div>
-									<!-- Instructors 1
+						<!-- Instructors 2
 									============================================= -->
-									<div class="col-lg-3">
-										<div class="feature-box hover-effect shadow-sm fbox-center fbox-bg fbox-light fbox-effect">
-											<div class="fbox-icon">
-												<a href="{{route('motif', 'hyno')}}"><i><img src="{{asset('images/clients/clients-1.jpg')}}" class="noborder nobg shadow-sm" style="z-index: 2;" alt=""></i></a>
-											</div>
-											<a href="{{route('motif', 'hyno')}}" class="button button-rounded button-reveal button-medium button-red tright"><i class="icon-angle-right"></i><span>Hino</span></a>
-											
-										</div>
-									</div>
-		
-									<!-- Instructors 2
-									============================================= -->
-									<div class="col-lg-3">
-										<div class="feature-box hover-effect shadow-sm fbox-center fbox-bg fbox-light fbox-effect">
-											<div class="fbox-icon">
-												<a href="{{route('motif', 'honda')}}"><i><img src="{{asset('images/clients/clients-2.png')}}" class="noborder nobg shadow-sm" style="z-index: 2;" alt=""></i></a>
-											</div>
-											<a href="{{route('motif', 'honda')}}" class="button button-rounded button-reveal button-medium button-red tright"><i class="icon-angle-right"></i><span>Honda</span></a>
+						<div class="col-lg-3">
+							<div class="feature-box hover-effect shadow-sm fbox-center fbox-bg fbox-light fbox-effect">
+								<div class="fbox-icon">
+									<a href="{{route('motif', 'masda')}}"><i><img src="{{asset('images/clients/clients-3.jpg')}}" class="noborder nobg shadow-sm" style="z-index: 2;" alt=""></i></a>
+								</div>
+								<a href="{{route('motif', 'masda')}}" class="button button-rounded button-reveal button-medium button-red tright"><i class="icon-angle-right"></i><span>Mazda</span></a>
 
-										</div>
-									</div>
-									<div class="col-lg-3"></div>
-
-		
-									
 							</div>
-					</div>
-					
+						</div>
 
-                        <!-- <div class="container clearfix center topmargin bottommargin">
+						<!-- Instructors 3
+									============================================= -->
+						<div class="col-lg-3">
+							<div class="feature-box hover-effect shadow-sm fbox-center fbox-bg fbox-light fbox-effect">
+								<div class="fbox-icon">
+									<a href="{{route('motif', 'wuling')}}"><i><img src="{{asset('images/clients/clients-5.jpg')}}" class="noborder nobg shadow-sm" style="z-index: 2;" alt=""></i></a>
+								</div>
+								<a href="{{route('motif', 'wuling')}}" class="button button-rounded button-reveal button-medium button-red tright"><i class="icon-angle-right"></i><span>Wuling</span></a>
+
+							</div>
+						</div>
+						<div class="col-lg-1"></div>
+
+
+					</div>
+				</div>
+
+				<div class="container clearfix topmargin bottommargin">
+					<div class="row">
+						<div class="col-lg-3"></div>
+						<!-- Instructors 1
+									============================================= -->
+						<div class="col-lg-3">
+							<div class="feature-box hover-effect shadow-sm fbox-center fbox-bg fbox-light fbox-effect">
+								<div class="fbox-icon">
+									<a href="{{route('motif', 'mercedes')}}"><i><img src="{{asset('images/clients/clients-4.jpg')}}" class="noborder nobg shadow-sm" style="z-index: 2;" alt=""></i></a>
+								</div>
+								<a href="{{route('motif', 'mercedes')}}" class="button button-rounded button-reveal button-medium button-red tright"><i class="icon-angle-right"></i><span>Mercedez Benz</span></a>
+
+							</div>
+						</div>
+
+						<!-- Instructors 2
+									============================================= -->
+						<div class="col-lg-3">
+							<div class="feature-box hover-effect shadow-sm fbox-center fbox-bg fbox-light fbox-effect">
+								<div class="fbox-icon">
+									<a href="{{route('motif', 'hyno')}}"><i><img src="{{asset('images/clients/clients-1.jpg')}}" class="noborder nobg shadow-sm" style="z-index: 2;" alt=""></i></a>
+								</div>
+								<a href="{{route('motif', 'hyno')}}" class="button button-rounded button-reveal button-medium button-red tright"><i class="icon-angle-right"></i><span>Hino</span></a>
+
+							</div>
+						</div>
+
+						<div class="col-lg-3"></div>
+
+
+
+					</div>
+				</div>
+
+
+				<!-- <div class="container clearfix center topmargin bottommargin">
                             <div class="col_one_fifth nobottommargin">
                                 <div class="feature-box media-box center">
                                     <div class="fbox-media">
@@ -335,4 +381,5 @@
 	<script src="{{asset('js/functions.js')}}"></script>
 
 </body>
+
 </html>

@@ -127,7 +127,7 @@
 				<h1>Tentang Kami</h1>
 				<!-- <span>Berita Terkini</span> -->
 				<ol class="breadcrumb">
-					<li class="breadcrumb-item"><a href="/">Home</a></li>
+					<li class="breadcrumb-item"><a href="/">Beranda</a></li>
 					<li class="breadcrumb-item active" aria-current="page">Tentang Kami</li>
 				</ol>
             </div>
