@@ -103,7 +103,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </li>
             <li class="nav-item">
               <router-link to="/berita" class="nav-link">
-                <i class="nav-icon fa fa-envelope-o"></i>
+                <ion-icon name="clipboard"></ion-icon>
                 <p>Berita & Promo</p>
               </router-link>
             </li>
@@ -132,7 +132,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
         <li class="nav-item has-treeview">
           <a href="#" class="nav-link">
-            <i class="nav-icon fa fa-envelope-o text-info"></i>
+            <ion-icon name="clipboard" class="text-info"></ion-icon>
             <p>
               REPORT
               <i class="fa fa-angle-left right"></i>
@@ -162,7 +162,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         @endcan
         <li class="nav-item has-treeview">
           <a href="#" class="nav-link">
-            <i class="nav-icon fa fa-plus-square-o text-info"></i>
+            <ion-icon name="git-merge" class="text-info"></ion-icon>
             <p>
               UNIT BISNIS
               <i class="fa fa-angle-left right"></i>
@@ -259,6 +259,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 </script>
 @endauth
 
+<script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
 <script src="/js/app.js"></script>
 </body>
 </html>
